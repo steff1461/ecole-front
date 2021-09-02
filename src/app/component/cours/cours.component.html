@@ -1,0 +1,32 @@
+<nb-card>
+  <nb-card-header>Your current lessons</nb-card-header>
+  <nb-card-body>
+
+    <div *ngFor="let lesson of lessons$ | async">
+      <nb-card>
+        <nb-card-header>Lesson name: {{lesson.cours.name}}</nb-card-header>
+        <nb-card-body>
+
+          <p>
+            Start date: {{lesson.cours.startDate}}
+          </p>
+
+          <p>
+            End date: {{lesson.cours.endDate}}
+          </p>
+
+          <p>
+            Duration: {{lesson.cours.numbersHours}}
+          </p>
+
+
+        </nb-card-body>
+        <nb-card-footer>
+
+          <button nbButton (click)="unsubscribe(lesson)">Unsubscribe</button>
+        </nb-card-footer>
+      </nb-card>
+
+    </div>
+  </nb-card-body>
+</nb-card>

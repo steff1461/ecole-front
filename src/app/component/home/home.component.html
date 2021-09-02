@@ -1,0 +1,27 @@
+<p>home</p>
+
+
+<nb-layout>
+
+  <nb-layout-header fixed>
+
+    SuperSchool
+    <a routerLink="/profile">
+      <button nbButton id="profile-btn">Profile</button>
+    </a>
+    <a routerLink="/cours">
+      <button nbButton id="cours-btn">Cours</button>
+    </a>
+
+  </nb-layout-header>
+
+  <nb-layout-column>
+
+    <router-outlet>
+
+    </router-outlet>
+
+  </nb-layout-column>
+
+</nb-layout>
+
